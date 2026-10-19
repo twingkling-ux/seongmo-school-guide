@@ -6,3 +6,6 @@ node_modules/
 work/
 *.tar.gz
 *.log
+
+.vercel
+.env*.local
