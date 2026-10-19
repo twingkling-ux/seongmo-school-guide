@@ -1,8 +1,8 @@
 @font-face{font-family:'Gamja Flower';src:url('assets/fonts/GamjaFlower-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 :root{--hand:'Gamja Flower',cursive;--blush:#f4e4df;--pink-ink:#814b56;--serif:var(--hand)}
 h1,h2,.school-motto p,.school-goal p,.career-intro h3,.schedule-heading h3,.alumni-letter blockquote{font-family:var(--hand);font-weight:400;letter-spacing:0}
-h1{font-size:clamp(44px,5.5vw,72px);line-height:1.12}
-h1 em{font-weight:400}
+h1{font-family:var(--sans);font-size:clamp(32px,4vw,54px);font-weight:700;line-height:1.4;letter-spacing:-.03em}
+h1 em{font-weight:700}
 h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .hero-heading{align-items:center;margin-bottom:36px}
 .hero-heading>p{line-height:2}
@@ -54,5 +54,5 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .alumni-letter figure img{transition:filter .4s ease}
 }
 @media(max-width:800px){.course-guide{padding:28px 22px}.career-intro h3{font-size:30px}.hero-heading{gap:24px}.contact h2{font-size:39px}}
-@media(max-width:560px){h1{font-size:46px}h2{font-size:37px}.photo-note{font-size:19px;left:14px;bottom:16px;max-width:calc(100% - 28px)}.school-motto p{font-size:26px}.school-goal p{font-size:25px}.course-guide{padding:28px 16px}.course-guide h2{font-size:34px}.uniform h2{font-size:36px}.schedule-heading h3{font-size:31px}.career-gallery{gap:18px}.alumni-letter blockquote{font-size:29px}.contact h2{font-size:39px}}
+@media(max-width:560px){h1{font-size:clamp(25px,6.5vw,36px)}h2{font-size:37px}.photo-note{font-size:19px;left:14px;bottom:16px;max-width:calc(100% - 28px)}.school-motto p{font-size:26px}.school-goal p{font-size:25px}.course-guide{padding:28px 16px}.course-guide h2{font-size:34px}.uniform h2{font-size:36px}.schedule-heading h3{font-size:31px}.career-gallery{gap:18px}.alumni-letter blockquote{font-size:29px}.contact h2{font-size:39px}}
 @media(prefers-reduced-motion:reduce){.hero-photo img,.space-card,.about-photos img,.career-photo img{transform:none!important;transition:none!important}.photo-note{transform:none}}
