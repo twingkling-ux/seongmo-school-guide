@@ -1,0 +1,8 @@
+.env*
+.vercel/
+.sites-local/
+.impeccable/
+node_modules/
+work/
+*.tar.gz
+*.log
