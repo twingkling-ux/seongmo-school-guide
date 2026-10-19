@@ -1,0 +1,58 @@
+@font-face{font-family:'Gamja Flower';src:url('assets/fonts/GamjaFlower-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+:root{--hand:'Gamja Flower',cursive;--blush:#f4e4df;--pink-ink:#814b56;--serif:var(--hand)}
+h1,h2,.school-motto p,.school-goal p,.career-intro h3,.schedule-heading h3,.alumni-letter blockquote{font-family:var(--hand);font-weight:400;letter-spacing:0}
+h1{font-size:clamp(44px,5.5vw,72px);line-height:1.12}
+h1 em{font-weight:400}
+h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
+.hero-heading{align-items:center;margin-bottom:36px}
+.hero-heading>p{line-height:2}
+.hero-photo{border-radius:20px}
+.photo-note{font-family:var(--hand);font-size:23px;background:#fff9ed;transform:rotate(-2deg);border-radius:10px;padding:9px 20px}
+.quick-nav{gap:18px}
+.quick-nav a{transition:color .2s ease,background-color .2s ease}
+.quick-nav a:hover{background:var(--tint);color:var(--green)}
+.section-heading>p{line-height:1.9}
+.section-heading h2{max-width:18ch}
+.school-motto p{font-size:29px;line-height:1.4}
+.school-goal p{font-size:28px;line-height:1.5}
+.school-goal p strong{font-weight:400}
+.about-symbols figcaption{padding-top:12px}
+.career-intro h3{font-size:31px;line-height:1.35}
+.career-gallery{gap:22px}
+.career-photo-button{padding:7px;background:#fff;border-radius:15px}
+.career-photo{border-radius:10px}
+.career-photo img{transition:transform .65s var(--ease),filter .65s var(--ease)}
+.career-photo-button:hover{filter:none}
+.alumni-letter blockquote{font-size:clamp(27px,3vw,36px);line-height:1.5}
+.alumni-author strong{font-size:17px}
+.alumni-letter summary{color:var(--pink-ink)}
+.alumni-letter{padding-block:40px}
+.alumni-letter figure{padding:8px;background:#fff;border-radius:16px}
+.alumni-letter figcaption{padding:0 8px 7px}
+.alumni-letter figure img{border-radius:10px}
+.course-guide{background:#f5f1e9;padding:36px;border-radius:20px;border:0}
+.course-guide h2{font-size:38px}
+.career-inputs input,.career-inputs select{border-color:#abb7a4;border-radius:10px}
+.filters button[aria-pressed=true],.uniform-tabs button[aria-pressed=true]{background:var(--green)}
+.uniform{background:#fffaf6;border:1px solid #e9ddd0}
+.uniform h2{font-family:var(--hand);font-size:40px}
+.schedule-heading h3{font-size:34px}
+.schedule-group h4{background:#e3eacb;color:var(--green);font-weight:600}
+.schedule-choice{background:var(--blush);padding:16px 18px;border-radius:12px;color:#633d45}
+.contact h2{font-size:44px}
+.subway-route{font-family:var(--sans);font-size:23px}
+.header nav a{transition:color .2s ease}
+.header nav a:focus-visible{border-radius:3px}
+.photo-button img,.about-symbols img{backface-visibility:hidden}
+.space-card{transition:transform .35s var(--ease)}
+@media(hover:hover) and (pointer:fine){
+.career-photo-button:hover img,.career-photo-button:focus-visible img{transform:scale(1.045);filter:saturate(1.08)}
+.about-photos>.photo-button:hover img{transform:scale(1.035)}
+.about-photos>.photo-button img{transition:transform .65s var(--ease)}
+.space-card:hover{transform:translateY(-5px)}
+.alumni-letter figure .photo-button:hover img{filter:saturate(1.1)}
+.alumni-letter figure img{transition:filter .4s ease}
+}
+@media(max-width:800px){.course-guide{padding:28px 22px}.career-intro h3{font-size:30px}.hero-heading{gap:24px}.contact h2{font-size:39px}}
+@media(max-width:560px){h1{font-size:46px}h2{font-size:37px}.photo-note{font-size:19px;left:14px;bottom:16px;max-width:calc(100% - 28px)}.school-motto p{font-size:26px}.school-goal p{font-size:25px}.course-guide{padding:28px 16px}.course-guide h2{font-size:34px}.uniform h2{font-size:36px}.schedule-heading h3{font-size:31px}.career-gallery{gap:18px}.alumni-letter blockquote{font-size:29px}.contact h2{font-size:39px}}
+@media(prefers-reduced-motion:reduce){.hero-photo img,.space-card,.about-photos img,.career-photo img{transform:none!important;transition:none!important}.photo-note{transform:none}}
