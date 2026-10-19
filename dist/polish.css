@@ -56,3 +56,10 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 @media(max-width:800px){.course-guide{padding:28px 22px}.career-intro h3{font-size:30px}.hero-heading{gap:24px}.contact h2{font-size:39px}}
 @media(max-width:560px){h1{font-size:clamp(25px,6.5vw,36px)}h2{font-size:37px}.photo-note{font-size:19px;left:14px;bottom:16px;max-width:calc(100% - 28px)}.school-motto p{font-size:26px}.school-goal p{font-size:25px}.course-guide{padding:28px 16px}.course-guide h2{font-size:34px}.uniform h2{font-size:36px}.schedule-heading h3{font-size:31px}.career-gallery{gap:18px}.alumni-letter blockquote{font-size:29px}.contact h2{font-size:39px}}
 @media(prefers-reduced-motion:reduce){.hero-photo img,.space-card,.about-photos img,.career-photo img{transform:none!important;transition:none!important}.photo-note{transform:none}}
+
+/* Clear, consistent section headings. */
+h2,.uniform h2,.career-intro h3,.schedule-heading h3{font-family:var(--sans);font-weight:700;letter-spacing:-.025em;line-height:1.45}
+h2,.course-guide h2,.uniform h2,.contact h2{font-size:clamp(28px,3vw,38px)}
+.section-heading h2{max-width:none}
+.career-intro h3,.schedule-heading h3{font-size:clamp(23px,2.4vw,30px)}
+@media(max-width:560px){h2,.course-guide h2,.uniform h2,.contact h2{font-size:clamp(24px,6vw,30px)}}
