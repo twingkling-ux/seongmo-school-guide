@@ -80,8 +80,8 @@ h1,h2,h3,.school-motto p,.school-goal p{letter-spacing:-.025em}.school-goal p st
 @media(max-width:600px){.interest-options{grid-template-columns:1fr 1fr;gap:8px}.interest-options button{font-size:14px;padding:12px;line-height:1.6}.grade-plan>summary{font-size:18px}.joint-guide{padding:20px}.course-guide{padding:24px 16px}}
 .welcome-greeting{position:relative;display:grid;justify-items:center;align-items:center;min-width:0}
 .welcome-puppet{display:block;width:100%;max-width:350px;height:auto;overflow:visible}
-.greeting-arm{transform-origin:455px 335px;animation:seongmo-wave 3.8s ease-in-out infinite}
-@keyframes seongmo-wave{0%,55%,100%{transform:rotate(0deg)}10%,30%{transform:rotate(13deg)}20%,40%{transform:rotate(-9deg)}}
+.greeting-arm{transform-origin:485px 335px;animation:seongmo-wave 3.8s ease-in-out infinite}
+@keyframes seongmo-wave{0%,55%,100%{transform:rotate(0deg)}10%,30%{transform:rotate(9deg)}20%,40%{transform:rotate(-7deg)}}
 .greeting-toggle{font:inherit;font-size:12px;color:var(--green);border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-height:44px;background:var(--paper);margin-top:8px}
 .welcome-greeting.is-paused .greeting-arm{animation-play-state:paused}
 .welcome:has(.welcome-greeting){grid-template-columns:1.15fr .85fr;padding-block:36px 44px;gap:32px}
