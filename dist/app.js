@@ -56,3 +56,9 @@ document.querySelectorAll('[data-career-photo]').forEach(button => {
  document.querySelectorAll('a[href="#daily-schedule"]').forEach(a=>a.addEventListener('click',()=>{const d=document.querySelector('.schedule-details');if(d)d.open=true;}));
  revealSchedule();
 })();
+
+// Grouped navigation keeps only one desktop menu open.
+nav.querySelectorAll('.nav-group').forEach(group=>group.addEventListener('toggle',()=>{if(group.open&&matchMedia('(min-width:1101px)').matches)nav.querySelectorAll('.nav-group').forEach(other=>{if(other!==group)other.open=false;});}));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.querySelectorAll('.nav-group').forEach(g=>g.open=false)));
+document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menu.contains(e.target))nav.querySelectorAll('.nav-group').forEach(g=>g.open=false);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')nav.querySelectorAll('.nav-group').forEach(g=>g.open=false);});
