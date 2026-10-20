@@ -1,5 +1,21 @@
 (() => {
  const preference=matchMedia('(prefers-reduced-motion: reduce)');
+ const greeting=document.querySelector('.welcome-greeting');
+ if(greeting){
+  const toggle=greeting.querySelector('.greeting-toggle');
+  let userPaused=false,visible=true;
+  const sync=()=>greeting.classList.toggle('is-paused',userPaused||!visible||document.hidden||preference.matches);
+  toggle.addEventListener('click',()=>{
+   userPaused=!userPaused;
+   toggle.setAttribute('aria-pressed',String(userPaused));
+   toggle.textContent=userPaused?'인사 다시 보기':'인사 멈추기';
+   sync();
+  });
+  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.05}).observe(greeting);
+  document.addEventListener('visibilitychange',sync);
+  preference.addEventListener('change',sync);
+  sync();
+ }
  const active=new Set();
  const play=(element,keyframes,options)=>{
   if(preference.matches||!element.animate)return;
