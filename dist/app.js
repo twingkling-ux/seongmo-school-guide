@@ -48,3 +48,11 @@ document.querySelectorAll('[data-career-photo]').forEach(button => {
     dialog.showModal();
   });
 });
+
+// Direct timetable links also reveal the optional full schedule.
+(() => {
+ const revealSchedule=()=>{if(location.hash==='#daily-schedule'){const d=document.querySelector('.schedule-details');if(d)d.open=true;}};
+ window.addEventListener('hashchange',revealSchedule);
+ document.querySelectorAll('a[href="#daily-schedule"]').forEach(a=>a.addEventListener('click',()=>{const d=document.querySelector('.schedule-details');if(d)d.open=true;}));
+ revealSchedule();
+})();
