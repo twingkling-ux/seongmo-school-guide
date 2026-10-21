@@ -7,13 +7,17 @@ const syncPicker=()=>picker.querySelectorAll('button').forEach(b=>b.setAttribute
 curriculum.profiles.forEach(p=>{const b=el('button',p.label);b.type='button';b.dataset.field=p.id;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{stale();input.value='';field.value=p.id;syncPicker();status.textContent=p.label+' 분야를 골랐습니다. 아래 추천 과목 살펴보기를 눌러 주세요.';});picker.append(b);});
 input.addEventListener('input',()=>queueMicrotask(syncPicker));field.addEventListener('change',syncPicker);
 function stale(){if(!result.hidden){result.hidden=true;status.textContent='입력이 바뀌었습니다. 추천 과목을 다시 확인해 주세요.'}}
-input.addEventListener('input',()=>{stale();const matches=matchCareer(input.value);field.value=matches.length===1?matches[0].id:'';status.textContent=matches.length===1?'관련 분야를 제안했습니다. 원하는 분야인지 확인해 주세요.':matches.length>1?'여러 분야와 연결되는 진로입니다. 추천받을 분야를 직접 선택해 주세요.':'아래 분야를 직접 선택해 주세요. 세부 진로는 선생님과 함께 조정할 수 있습니다.'});
+input.addEventListener('input',()=>{stale();const matches=matchCareer(input.value);field.value=matches.length===1?matches[0].id:'';status.textContent=matches.length===1?'관련 분야를 제안했습니다. 원하는 분야인지 확인해 주세요.':matches.length>1?'여러 분야와 연결되는 진로입니다. 추천받을 분야를 직접 선택해 주세요.':'위의 관심 분야를 직접 선택해 주세요. 세부 진로는 선생님과 함께 조정할 수 있습니다.'});
 field.addEventListener('change',stale);
 document.querySelector('#career-form').addEventListener('submit',e=>{
  e.preventDefault();const profile=curriculum.profiles.find(p=>p.id===field.value);
- if(!profile){status.textContent='추천받을 분야를 먼저 선택해 주세요.';field.focus();return}
+ if(!profile){status.textContent='추천받을 분야를 먼저 선택해 주세요.';picker.querySelector('button').focus();return}
  result.replaceChildren();result.hidden=false;
- result.append(el('h3',profile.label+' · 학년별 과목 안내'),el('p',profile.reason),el('p','진로 연계성을 바탕으로 만든 추천 예시입니다. 합격 요건이나 필수 선수 과목을 뜻하지 않습니다.','small'));
+ result.append(el('h3',profile.label+' · 학년별 과목 안내'),el('p','진로 연계성을 바탕으로 만든 추천 예시입니다. 합격 요건이나 필수 선수 과목을 뜻하지 않습니다.','small'));
+ const featured=el('section',null,'recommended-preview');featured.append(el('h4','먼저 만나볼 진로 연계 과목'));
+ const available=new Set(curriculum.groups.flatMap(g=>g.courses));const highlights=profile.priority.filter(name=>available.has(name)).slice(0,4);
+ if(highlights.length){const list=el('ul');highlights.forEach(name=>{const item=el('li');item.append(el('strong',name));const grades=[...new Set(curriculum.groups.filter(g=>g.courses.includes(name)).map(g=>g.term[0]+'학년'))];item.append(el('span',grades.join(' · ')+' 선택 과목'));list.append(item)});featured.append(list,el('p',profile.reason));}else featured.append(el('p','아직 진로를 정하지 않아도 괜찮아요. 아래 학년별 과목을 비교하며 관심을 찾아보세요.'));
+ featured.append(el('p','진로와 연결해 살펴볼 후보입니다. 실제 선택군과 신청 조건은 아래 학년별 안내에서 확인하세요.','small'));result.append(featured);
  const selections={};
  const summary=el('p','','course-plan-status');summary.setAttribute('role','status');summary.setAttribute('aria-live','polite');
  const update=()=>{const incomplete=curriculum.groups.filter(g=>selections[g.id]?.size!==g.count);summary.textContent=incomplete.length?'선택 확인 필요: '+incomplete.map(g=>g.id+'군 '+(selections[g.id]?.size||0)+'/'+g.count+'과목').join(' · '):'모든 선택군의 과목 수가 편성표와 일치합니다. 선택 과목 총 64학점 · 학교 지정 교과와 합산 174학점';};

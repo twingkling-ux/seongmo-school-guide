@@ -95,9 +95,9 @@
 .uniform h2{font-size:32px}
 .uniform-image{width:100%;min-width:0;aspect-ratio:3/2;display:grid;place-items:center;overflow:hidden}
 .uniform-image img{width:96%;height:96%;aspect-ratio:3/2;object-fit:contain}
-.uniform-image img[src$="/winter.png"]{transform:scale(1.035);transform-origin:center 95%}
-#photo-content>img[src$="/summer.png"],#photo-content>img[src$="/winter.png"]{width:min(900px,78vw);height:min(600px,52vw);max-height:74dvh;object-fit:contain}
-#photo-content>img[src$="/winter.png"]{transform:scale(1.035);transform-origin:center 95%}
+.uniform-image img[src$="/winter.webp"]{transform:scale(1.035);transform-origin:center 95%}
+#photo-content>img[src$="/summer.webp"],#photo-content>img[src$="/winter.webp"]{width:min(900px,78vw);height:min(600px,52vw);max-height:74dvh;object-fit:contain}
+#photo-content>img[src$="/winter.webp"]{transform:scale(1.035);transform-origin:center 95%}
 .uniform-tabs{display:flex;gap:6px;margin-top:22px}
 .uniform-tabs button{min-height:44px;border-radius:30px;padding:8px 27px;border:1px solid var(--line);font-size:14px}
 .uniform-tabs button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
