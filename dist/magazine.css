@@ -70,12 +70,6 @@
 @media(min-width:651px){.promise-list article:first-child .promise-photo{aspect-ratio:1.6}.promise-list{align-items:stretch}.promise-list article+article .promise-photo{min-height:220px}}
 
 .campus-window>img{object-position:center 25%}
-.welcome-quote figcaption a,footer>a{display:inline-flex;align-items:center;min-height:44px;padding:10px 4px;line-height:1.6;text-underline-offset:5px}
-.welcome-quote figcaption a{margin-top:8px}
-.career-intro p{line-height:1.85;word-break:keep-all;overflow-wrap:break-word}.career-intro p+p{margin-top:12px}
-.career-intro{display:block}
-.career-photo-caption,.memory-frame figcaption span,.illustration-notice{font-size:14px;line-height:1.75}
-@media(max-width:650px){.career-gallery .career-photo-caption{font-size:14px;line-height:1.7}.welcome-quote figcaption a{display:flex;width:fit-content}}
 .space-card img.space-photo{display:block;width:100%;height:auto;object-fit:cover}
 .recommend-submit{margin:18px 0 22px}
 .career-search{border-top:1px solid var(--line);padding:16px 0}.career-search summary{cursor:pointer;padding:8px 0;font-weight:600}.career-search .career-inputs{display:block;max-width:600px;margin-top:16px}
