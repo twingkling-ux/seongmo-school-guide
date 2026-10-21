@@ -68,3 +68,5 @@
 }
 
 @media(min-width:651px){.promise-list article:first-child .promise-photo{aspect-ratio:1.6}.promise-list{align-items:stretch}.promise-list article+article .promise-photo{min-height:220px}}
+
+.campus-window>img{object-position:center 25%}
