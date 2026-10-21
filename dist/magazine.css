@@ -70,3 +70,20 @@
 @media(min-width:651px){.promise-list article:first-child .promise-photo{aspect-ratio:1.6}.promise-list{align-items:stretch}.promise-list article+article .promise-photo{min-height:220px}}
 
 .campus-window>img{object-position:center 25%}
+
+/* Supplied school moments, presented as captioned photograph frames. */
+.tradition-photo{align-self:center;min-width:0}
+.memory-frame{margin:0;padding:12px;background:#fffdf8;border:1px solid #e2e4d9;box-shadow:0 12px 28px #234b3b0d}
+.memory-frame .photo-button{display:block;width:100%;overflow:hidden;border-radius:3px}
+.memory-frame img{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;background:#f5f2ea}
+.memory-frame figcaption{padding:16px 8px 8px}
+.memory-frame figcaption strong{display:block;font-size:17px;line-height:1.5}
+.memory-frame figcaption span{display:block;margin-top:7px;font-size:13px;line-height:1.7;color:var(--muted)}
+.tradition-photo .memory-frame img{aspect-ratio:auto}
+.school-memories{margin-top:64px;padding-top:36px;border-top:1px solid var(--line)}
+.memories-heading{margin-bottom:28px}.memories-heading h3{font-size:clamp(22px,3vw,28px);line-height:1.5}
+.memory-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.memory-gallery .memory-frame:nth-child(2){margin-top:18px}
+.day-scenes article:not(:first-child){grid-template-columns:1fr;gap:16px}
+.day-scenes article:not(:first-child)>img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media(max-width:650px){.memory-gallery{grid-template-columns:1fr;gap:24px}.memory-gallery .memory-frame:nth-child(2){margin-top:0}.school-memories{margin-top:36px;padding-top:28px}.memory-frame{padding:9px}.memory-frame figcaption{padding:14px 6px 8px}.day-scenes article:not(:first-child){grid-template-columns:1fr;gap:16px}}
