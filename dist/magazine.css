@@ -96,3 +96,6 @@
 .day-scenes article:not(:first-child){grid-template-columns:1fr;gap:16px}
 .day-scenes article:not(:first-child)>img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 @media(max-width:650px){.memory-gallery{grid-template-columns:1fr;gap:24px}.memory-gallery .memory-frame:nth-child(2){margin-top:0}.school-memories{margin-top:36px;padding-top:28px}.memory-frame{padding:9px}.memory-frame figcaption{padding:14px 6px 8px}.day-scenes article:not(:first-child){grid-template-columns:1fr;gap:16px}}
+
+/* The welcome wave finishes once without a persistent pause control. */
+.campus-stage .greeting-arm{animation-iteration-count:1}.campus-window{padding-bottom:8px}

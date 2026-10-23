@@ -5,7 +5,7 @@
   const toggle=greeting.querySelector('.greeting-toggle');
   let userPaused=false,visible=true;
   const sync=()=>greeting.classList.toggle('is-paused',userPaused||!visible||document.hidden||preference.matches);
-  toggle.addEventListener('click',()=>{
+  toggle?.addEventListener('click',()=>{
    userPaused=!userPaused;
    toggle.setAttribute('aria-pressed',String(userPaused));
    toggle.textContent=userPaused?'인사 다시 보기':'인사 멈추기';
