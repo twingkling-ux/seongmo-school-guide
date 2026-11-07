@@ -99,3 +99,6 @@
 
 /* The welcome wave finishes once without a persistent pause control. */
 .campus-stage .greeting-arm{animation-iteration-count:1}.campus-window{padding-bottom:8px}
+
+/* Always visible career search and concise alumni messages. */
+.career-search h3{font-size:1rem;margin:8px 0}.alumni-2026{margin:32px 0 48px}.alumni-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.alumni-summary{border-top:1px solid var(--line);padding:20px 0}.alumni-summary h4{margin:0}.alumni-summary p{word-break:keep-all;overflow-wrap:anywhere}@media(max-width:650px){.alumni-summary-grid{grid-template-columns:1fr;gap:8px}}
