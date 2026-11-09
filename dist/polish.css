@@ -57,6 +57,21 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 @media(max-width:560px){h1{font-size:clamp(25px,6.5vw,36px)}h2{font-size:37px}.photo-note{font-size:19px;left:14px;bottom:16px;max-width:calc(100% - 28px)}.school-motto p{font-size:26px}.school-goal p{font-size:25px}.course-guide{padding:28px 16px}.course-guide h2{font-size:34px}.uniform h2{font-size:36px}.schedule-heading h3{font-size:31px}.career-gallery{gap:18px}.alumni-letter blockquote{font-size:29px}.contact h2{font-size:39px}}
 @media(prefers-reduced-motion:reduce){.hero-photo img,.space-card,.about-photos img,.career-photo img{transform:none!important;transition:none!important}.photo-note{transform:none}}
 
+/* Alumni notes use one calm, quote-led rhythm; memories punctuate every two voices. */
+.alumni-quote-list{display:block;margin-top:24px}
+.alumni-quote-list .alumni-summary{display:grid;grid-template-columns:172px minmax(0,1fr);gap:10px 20px;align-items:start;padding:26px 10px;border-top:1px solid var(--line)}
+.alumni-quote-list .alumni-summary h4{grid-column:1;margin:0;font-size:17px}
+.alumni-quote-list .alumni-summary .small{grid-column:1;grid-row:2;margin:0;line-height:1.65}
+.alumni-quote-list .alumni-summary>p:last-child{grid-column:2;grid-row:1 / span 2;margin:0;font-size:clamp(22px,2.35vw,31px);font-weight:500;line-height:1.45;letter-spacing:-.035em}
+.alumni-quote-list .alumni-summary>p:last-child::before,.alumni-quote-list .alumni-summary>p:last-child::after{color:var(--pink-ink)}
+.alumni-quote-list .alumni-summary>p:last-child::before{content:'“'}
+.alumni-quote-list .alumni-summary>p:last-child::after{content:'”'}
+.alumni-memory{margin:14px 0 34px;padding:8px;background:#fff;border-radius:16px}
+.alumni-memory .photo-button{display:block;width:100%}
+.alumni-memory img{display:block;width:100%;aspect-ratio:3 / 1;object-fit:cover;border-radius:10px}
+.alumni-memory figcaption{padding:8px 8px 2px;font-size:12px;color:var(--muted)}
+@media(max-width:650px){.alumni-quote-list .alumni-summary{grid-template-columns:1fr;gap:6px;padding:22px 0}.alumni-quote-list .alumni-summary .small,.alumni-quote-list .alumni-summary>p:last-child{grid-column:1;grid-row:auto}.alumni-quote-list .alumni-summary>p:last-child{font-size:23px;margin-top:8px}.alumni-memory{margin:8px 0 24px}.alumni-memory img{aspect-ratio:1.35}}
+
 /* Clear, consistent section headings. */
 h2,.uniform h2,.career-intro h3,.schedule-heading h3{font-family:var(--sans);font-weight:700;letter-spacing:-.025em;line-height:1.45}
 h2,.course-guide h2,.uniform h2,.contact h2{font-size:clamp(28px,3vw,38px)}
@@ -96,3 +111,4 @@ h1,h2,h3,.school-motto p,.school-goal p{letter-spacing:-.025em}.school-goal p st
  .welcome:has(.welcome-greeting) .welcome-actions{margin-top:16px}
 }
 @media(prefers-reduced-motion:reduce){.greeting-arm{animation:none}.greeting-toggle{display:none}}
+
