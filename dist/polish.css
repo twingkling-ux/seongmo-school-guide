@@ -62,15 +62,26 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .alumni-quote-list .alumni-summary{display:grid;grid-template-columns:172px minmax(0,1fr);gap:10px 20px;align-items:start;padding:26px 10px;border-top:1px solid var(--line)}
 .alumni-quote-list .alumni-summary h4{grid-column:1;margin:0;font-size:17px}
 .alumni-quote-list .alumni-summary .small{grid-column:1;grid-row:2;margin:0;line-height:1.65}
-.alumni-quote-list .alumni-summary>p:last-child{grid-column:2;grid-row:1 / span 2;margin:0;font-size:clamp(22px,2.35vw,31px);font-weight:500;line-height:1.45;letter-spacing:-.035em}
+.alumni-quote-list .alumni-summary>p:last-child{grid-column:2;grid-row:1 / span 2;margin:0;font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.5;letter-spacing:-.03em}
 .alumni-quote-list .alumni-summary>p:last-child::before,.alumni-quote-list .alumni-summary>p:last-child::after{color:var(--pink-ink)}
 .alumni-quote-list .alumni-summary>p:last-child::before{content:'“'}
 .alumni-quote-list .alumni-summary>p:last-child::after{content:'”'}
-.alumni-memory{margin:14px 0 34px;padding:8px;background:#fff;border-radius:16px}
+.alumni-memory{margin:26px 0 52px;padding:12px;background:#fff;border-radius:16px}
 .alumni-memory .photo-button{display:block;width:100%}
-.alumni-memory img{display:block;width:100%;aspect-ratio:3 / 1;object-fit:cover;border-radius:10px}
+.alumni-memory img{display:block;width:100%;aspect-ratio:2.35 / 1;object-fit:contain;border-radius:10px}
 .alumni-memory figcaption{padding:8px 8px 2px;font-size:12px;color:var(--muted)}
 @media(max-width:650px){.alumni-quote-list .alumni-summary{grid-template-columns:1fr;gap:6px;padding:22px 0}.alumni-quote-list .alumni-summary .small,.alumni-quote-list .alumni-summary>p:last-child{grid-column:1;grid-row:auto}.alumni-quote-list .alumni-summary>p:last-child{font-size:23px;margin-top:8px}.alumni-memory{margin:8px 0 24px}.alumni-memory img{aspect-ratio:1.35}}
+
+/* Both graduation years share the same quote sequence, with each memory used once. */
+.alumni-2026>h3,.alumni-2026>.small{display:none}
+.alumni-letters{margin-top:0}
+.alumni-letters .alumni-letter{background:transparent!important;border-radius:0!important;padding:26px 10px!important}
+.alumni-letters .alumni-letter-heading{grid-template-columns:172px minmax(0,1fr);gap:10px 20px}
+.alumni-letters .alumni-letter blockquote{font-family:var(--sans);font-size:clamp(20px,2vw,26px);line-height:1.5;font-weight:500;letter-spacing:-.03em}
+.alumni-letters .alumni-letter details{grid-column:2;margin:0}
+.alumni-letters .alumni-letter figure{display:none}
+.alumni-letters .alumni-letter:last-child figure.alumni-memory{display:block}
+@media(max-width:650px){.alumni-quote-list .alumni-summary>p:last-child,.alumni-letters .alumni-letter blockquote{font-size:21px}.alumni-letters .alumni-letter-heading{grid-template-columns:1fr;gap:6px}.alumni-letters .alumni-letter details{grid-column:1}.alumni-letters .alumni-letter{padding:22px 0!important}}
 
 /* Clear, consistent section headings. */
 h2,.uniform h2,.career-intro h3,.schedule-heading h3{font-family:var(--sans);font-weight:700;letter-spacing:-.025em;line-height:1.45}
