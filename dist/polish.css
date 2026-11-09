@@ -1,3 +1,4 @@
+warning: in the working copy of 'dist/index.html', LF will be replaced by CRLF the next time Git touches it
 @font-face{font-family:'Gamja Flower';src:url('assets/fonts/GamjaFlower-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 :root{--hand:'Gamja Flower',cursive;--blush:#f4e4df;--pink-ink:#814b56;--serif:var(--hand)}
 h1,h2,.school-motto p,.school-goal p,.career-intro h3,.schedule-heading h3,.alumni-letter blockquote{font-family:var(--hand);font-weight:400;letter-spacing:0}
@@ -70,6 +71,7 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .alumni-memory .photo-button{display:block;width:100%}
 .alumni-memory img{display:block;width:100%;aspect-ratio:2.35 / 1;object-fit:contain;border-radius:10px}
 .alumni-memory figcaption{padding:8px 8px 2px;font-size:12px;color:var(--muted)}
+@media(min-width:651px){.alumni-memory{width:min(calc(100vw - 48px),1440px);margin-left:50%;margin-right:0;transform:translateX(-50%)}}
 @media(max-width:650px){.alumni-quote-list .alumni-summary{grid-template-columns:1fr;gap:6px;padding:22px 0}.alumni-quote-list .alumni-summary .small,.alumni-quote-list .alumni-summary>p:last-child{grid-column:1;grid-row:auto}.alumni-quote-list .alumni-summary>p:last-child{font-size:23px;margin-top:8px}.alumni-memory{margin:8px 0 24px}.alumni-memory img{aspect-ratio:1.35}}
 
 /* Both graduation years share the same quote sequence, with each memory used once. */
