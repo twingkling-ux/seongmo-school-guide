@@ -1,4 +1,3 @@
-warning: in the working copy of 'dist/index.html', LF will be replaced by CRLF the next time Git touches it
 @font-face{font-family:'Gamja Flower';src:url('assets/fonts/GamjaFlower-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 :root{--hand:'Gamja Flower',cursive;--blush:#f4e4df;--pink-ink:#814b56;--serif:var(--hand)}
 h1,h2,.school-motto p,.school-goal p,.career-intro h3,.schedule-heading h3,.alumni-letter blockquote{font-family:var(--hand);font-weight:400;letter-spacing:0}
@@ -81,8 +80,7 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .alumni-letters .alumni-letter-heading{grid-template-columns:172px minmax(0,1fr);gap:10px 20px}
 .alumni-letters .alumni-letter blockquote{font-family:var(--sans);font-size:clamp(20px,2vw,26px);line-height:1.5;font-weight:500;letter-spacing:-.03em}
 .alumni-letters .alumni-letter details{grid-column:2;margin:0}
-.alumni-letters .alumni-letter figure{display:none}
-.alumni-letters .alumni-letter:last-child figure.alumni-memory{display:block}
+.alumni-letters .alumni-letter figure.alumni-memory{display:block}
 @media(max-width:650px){.alumni-quote-list .alumni-summary>p:last-child,.alumni-letters .alumni-letter blockquote{font-size:21px}.alumni-letters .alumni-letter-heading{grid-template-columns:1fr;gap:6px}.alumni-letters .alumni-letter details{grid-column:1}.alumni-letters .alumni-letter{padding:22px 0!important}}
 
 /* Clear, consistent section headings. */
