@@ -81,6 +81,7 @@ h2{font-size:clamp(36px,4vw,48px);line-height:1.2}
 .alumni-letters .alumni-letter blockquote{font-family:var(--sans);font-size:clamp(20px,2vw,26px);line-height:1.5;font-weight:500;letter-spacing:-.03em}
 .alumni-letters .alumni-letter details{grid-column:2;margin:0}
 .alumni-letters .alumni-letter figure.alumni-memory{display:block}
+.alumni-letters .alumni-letter figure.alumni-memory img{height:auto;aspect-ratio:auto}
 @media(max-width:650px){.alumni-quote-list .alumni-summary>p:last-child,.alumni-letters .alumni-letter blockquote{font-size:21px}.alumni-letters .alumni-letter-heading{grid-template-columns:1fr;gap:6px}.alumni-letters .alumni-letter details{grid-column:1}.alumni-letters .alumni-letter{padding:22px 0!important}}
 
 /* Clear, consistent section headings. */
